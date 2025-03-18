@@ -1,0 +1,11 @@
+# docker-compose.yml
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"       # порт для сообщений
+      - "15672:15672"     # веб-интерфейс
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
